@@ -4,14 +4,13 @@ class Solution {
 
         for(int i=0; i<arr.length; i++){
             newarr[i] = countbit(arr[i])*10001 + arr[i];
-
         }
         Arrays.sort(newarr);
 
         for(int i=0; i<arr.length;i++){
             newarr[i] = newarr[i]%10001;
         }
-        
+
         return newarr;
 
     }
