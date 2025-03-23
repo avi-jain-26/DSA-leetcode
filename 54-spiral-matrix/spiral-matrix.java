@@ -36,6 +36,8 @@ class Solution {
         left++;
       } 
     }
+
+    // O(n x m) time complexity;
       return list;
     }
 }
