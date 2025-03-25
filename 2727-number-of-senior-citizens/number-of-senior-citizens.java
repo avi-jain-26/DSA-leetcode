@@ -1,25 +1,12 @@
 class Solution {
     public int countSeniors(String[] details) {
+        int count =0;
 
-         int count =0;
-
-         for(int i =0; i<details.length; i++){
-
-              int s1 = details[i].charAt(11)-'0';
-             
-              int s2 = details[i].charAt(12)-'0';
-           
-              int s = (s1*10)+s2;
-              
-              System.out.println(s1);
-              if(s>60){
+        for(String s: details){
+            if(s.charAt(11)=='6'&& s.charAt(12)>'0' || s.charAt(11)>'6'){
                 count++;
-              }
-
             }
-
-
-         return count;
-        
+        }
+        return count;
     }
 }
