@@ -14,6 +14,6 @@ class Solution {
             }
          }
 
-         return Math.max(count,cons);
+         return cons = Math.max(count,cons);
     }
 }
