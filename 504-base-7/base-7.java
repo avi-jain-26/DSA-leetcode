@@ -3,9 +3,12 @@ class Solution {
 
             int x = Math.abs(num);
             int rem = 0;
-            int ques=x/7;
-            rem = x%7;
-            String s = Integer.toString(rem);
+            int ques=x;
+            String s = "";
+
+            if(x==0){
+                return "0";
+            }
 
            while(ques>0){
                int ques2 = ques/7;
