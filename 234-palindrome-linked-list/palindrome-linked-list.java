@@ -11,12 +11,13 @@ class Solution {
        }
 
        ListNode reversed = reverse(s);
-
+        
         while(reversed != null){
 
             if(head.val!=reversed.val){
                 return false;
             }
+            
             head= head.next;
             reversed = reversed.next;
 
