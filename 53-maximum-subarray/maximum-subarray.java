@@ -18,7 +18,7 @@ class Solution {
         // }
         // return max;
 
-        int curr =0; 
+       int curr =0;
         int max = Integer.MIN_VALUE;
 
         for(int i: nums){
