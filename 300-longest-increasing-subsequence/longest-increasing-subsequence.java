@@ -25,7 +25,7 @@ class Solution {
            take = 1+solve(i+1,i,nums,dp);
         }
 
-        dp[i][j+1]= Math.max(nontake,take);
-        return Math.max(nontake,take);
+        return dp[i][j+1]= Math.max(nontake,take);
+        
     }
 }
