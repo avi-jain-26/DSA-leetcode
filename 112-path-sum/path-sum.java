@@ -19,14 +19,11 @@ class Solution {
             return false;
         }
 
-        if(targetSum == root.val && root.left==null && root.right==null){
+        if(root.left==null && root.right==null && targetSum==root.val){
             return true;
         }
 
-        
-
-       return hasPathSum(root.right, targetSum-root.val) || hasPathSum(root.left, targetSum-root.val);
-
+        return hasPathSum(root.left,targetSum-root.val)||hasPathSum(root.right,targetSum-root.val);
 
     }
 }
