@@ -1,27 +1,33 @@
-public class Solution {
-    public int longestPalindrome(String s) {
-        int[] count = new int[128];  // ASCII
+class Solution {
+    public int longestPalindrome(String s) 
+    {
+        int freq[]=new int[128];
 
-        for (char c : s.toCharArray()) {
-            count[c]++;
+        for(char ch:s.toCharArray())
+        {
+            freq[ch]++;
         }
 
-        int length = 0;
-        boolean odd = false;
+        int even=0;
+        boolean odd=false;
+        for(int i:freq)
+        {
+            even+=(i/2)*2;
 
-        for (int freq : count) {
-            if (freq % 2 == 0) {
-                length += freq;
-            } else {
-                length += freq - 1;
-                odd = true;
+            if(i%2==1)
+            {
+                odd=true;
             }
         }
 
-        if (odd) {
-            length += 1;  
+        if(odd)
+        {
+            even+=1;
         }
 
-        return length;
+        return even;
+
+        
+        
     }
 }
